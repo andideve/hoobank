@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  @apply text-[14px] lg:text-[16px];
+  --background-primary: hsl(224deg, 100%, 3%);
+  --background-secondary: hsla(260, 8%, 4%, 0.6);
+  --text-gradient: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  ); /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+  --background-gradient: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+  --background-gradient-card: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+body {
+  @apply overflow-x-hidden text-base text-white bg-primary;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.frame-x {
+  padding-right: 8vw;
+  padding-left: 8vw;
+}
+.remove-frame-x--left {
+  margin-left: -8vw;
+}
+.remove-frame-x--right {
+  margin-right: -8vw;
+}
+.navbar-height {
+  height: 5.75rem;
+}
+.section-space-y {
+  @apply py-20;
+}
+
+.bg-primary {
+  background-color: var(--background-primary);
+}
+.bg-secondary {
+  background-color: var(--background-secondary);
+}
+
+.text-gradient {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.bg-gradient {
+  background: var(--background-gradient);
+}
+.bg-gradient-card {
+  background: var(--background-gradient-card);
+}
+.hover\:bg-gradient-card:hover {
+  background: var(--background-gradient-card);
+}
